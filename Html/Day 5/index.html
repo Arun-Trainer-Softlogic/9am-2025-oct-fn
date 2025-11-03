@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #000000;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        background: #1e90ff;
+        padding: 20px 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      form {
+        background-color: rgb(247, 170, 170);
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 30px 40px;
+        border-radius: 20px;
+      }
+      label {
+        font-weight: 500;
+        color: #211d1d;
+        display: block;
+        margin-bottom: 1px;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      input[type="date"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px soild #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+      input[type="text"]:focus,
+      input[type="number"]:focus,
+      input[type="email"]:focus,
+      input[type="date"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #1e90ff;
+        outline: none;
+        box-shadow: 10 20 5px rgba(27, 27, 27, 0.4);
+      }
+
+      textarea {
+        resize: vertical;
+      }
+      input[type="file"] {
+        border: none;
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 6px;
+      }
+
+      /* 🔘 Submit and Reset Buttons */
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #1e90ff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+      }
+
+      input[type="reset"] {
+        background-color: #999;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0077e6;
+      }
+
+      input[type="reset"]:hover {
+        background-color: #777;
+      }
+
+      /* ✨ Section Breaks */
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #e0e0e0;
+        margin: 25px 0;
+      }
+
+      /* 🎀 Group Fieldset Styling */
+      fieldset {
+        border: 1px solid #d0d0d0;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        padding: 20px;
+        background-color: #fafafa;
+      }
+
+      legend {
+        font-weight: 600;
+        color: #1e90ff;
+        padding: 0 10px;
+      }
+
+      /* 📱 Responsive Design */
+      @media (max-width: 600px) {
+        form {
+          padding: 20px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Admission Form</h1>
+
+    <form action="https://formspree.io/f/mldovonp" method="POST">
+      <label>Photo:</label>
+      <input type="file" name="photo" /><br /><br />
+
+      <label>Full Name:</label>
+      <input type="text" name="fullname" required /><br /><br />
+
+      <label>Age:</label>
+      <input type="number" name="age" min="1" max="100" /><br /><br />
+
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" /><br /><br />
+
+      <label>Attach Birth Certificate:</label>
+      <input type="file" name="birth_certificate" /><br /><br />
+
+      <label>Gender:</label>
+      <select name="gender">
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option></select
+      ><br /><br />
+
+      <label>Nationality:</label>
+      <select name="nationality">
+        <option value="">--Select--</option>
+        <option>Indian</option>
+        <option>American</option>
+        <option>British</option>
+        <option>Other</option></select
+      ><br /><br />
+
+      <label>Religion:</label>
+      <input type="text" name="religion" /><br /><br />
+
+      <label>Community / Caste:</label>
+      <input type="text" name="community" /><br /><br />
+
+      <label>Aadhar Card Number:</label>
+      <input type="number" name="aadhar" /><br /><br />
+
+      <label>Phone:</label>
+      <input type="number" name="phone" /><br /><br />
+
+      <label>Email:</label>
+      <input type="email" name="email" /><br /><br />
+
+      <label>Address:</label><br />
+      <textarea
+        name="address"
+        rows="3"
+        cols="30"
+        placeholder="Temporary / Permanent Address"
+      ></textarea
+      ><br /><br />
+
+      <label>Parents / Guardians:</label><br />
+      <input type="checkbox" name="parent_type" value="Father" /> Father
+      <input type="checkbox" name="parent_type" value="Mother" /> Mother
+      <input type="checkbox" name="parent_type" value="Guardian" /> Guardian
+      <br /><br />
+
+      <label>Parent's Phone:</label>
+      <input type="number" name="parent_phone" /><br /><br />
+
+      <label>Parent Occupation:</label>
+      <input type="text" name="occupation" /><br /><br />
+
+      <label>Sibling Studying in the Same School:</label>
+      <input type="text" name="sibling" /><br /><br />
+
+      <label>Annual Income:</label>
+      <input type="number" name="income" /><br /><br />
+
+      <label>Medical Issue / Disability:</label>
+      <select name="medical_issue">
+        <option value="">--Select--</option>
+        <option>Yes</option>
+        <option>No</option></select
+      ><br /><br />
+
+      <label>Blood Group:</label>
+      <select name="blood_group">
+        <option value="">--Select--</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+        <option>AB+</option>
+        <option>AB-</option></select
+      ><br /><br />
+
+      <label>Add Transfer Certificate (TC):</label>
+      <input type="file" name="tc" /><br /><br />
+
+      <label>Identification Marks:</label>
+      <input type="text" name="id_marks" /><br /><br />
+
+      <label>Extra-Curricular Activities:</label>
+      <input type="text" name="activities" /><br /><br />
+
+      <label>Mother Tongue:</label>
+      <select name="mother_tongue">
+        <option value="">--Select--</option>
+        <option>English</option>
+        <option>Hindi</option>
+        <option>Tamil</option>
+        <option>Telugu</option>
+        <option>Malayalam</option>
+        <option>Other</option></select
+      ><br /><br />
+
+      <input type="submit" value="Submit Form" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
