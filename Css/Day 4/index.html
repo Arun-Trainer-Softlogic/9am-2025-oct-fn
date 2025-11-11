@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox</title>
+
+    <style>
+      .container {
+        display: flex;
+        background-color: lightblue;
+        margin-bottom: 30px;
+      }
+      .box {
+        background-color: coral;
+        color: wheat;
+        padding: 20px;
+        margin: 10px;
+        flex: 1;
+        text-align: center;
+      }
+
+
+
+      .containerr{
+        display: flex;
+        justify-content: center;
+        background: lightblue;
+        padding: 20px;
+      }
+      .item{
+        background: gray;
+        color: wheat;
+        padding: 20px;
+        width: 200px;
+        margin: 20px;
+        text-align: center;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- flex box stands for flexible box layout
+    it is used to align and distribute space among items in a container 
+    the main advantage  is you dont need to floats , inline -block hacks or complex positioning  -->
+
+     <div class="container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+    </div> 
+
+    <div class="containerr">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+    </div>
+
+
+
+  </body>
+</html>
