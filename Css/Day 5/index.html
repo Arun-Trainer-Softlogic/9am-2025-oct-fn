@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            background-color: lightblue;
+            border: 2px solid steelblue;
+            margin: 5px;
+            padding: 10px;
+        }
+
+
+
+        /* different display types  */
+
+        .block{
+            display: block;
+            width: 200px;
+            height:200px ;
+            
+        }
+
+
+        .inline{
+            display:  inline;
+            width: 200px;
+           
+        }
+        
+
+
+        .inline-block{
+            display: inline-block;
+            width: 500px;
+            height: 200px;
+        }
+
+
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display properties Demonstration 
+
+    </h1>
+
+    <div class="box block">Block element</div>
+    <div class="box block">Block Element 2 (stacks vertically )</div>
+
+
+    <p class="box inline ">Inline Element </p>
+    <p class="box inline ">Inline Element 2 (flows in the same line) </p>
+
+
+
+    <div class="box inline-block">inline-Block elements </div>
+    <div class="box inline-block">inline-Block elements 2</div>
+
+
+    <div class="box none">This element had display : none</div>
+
+
+
+</body>
+</html>
