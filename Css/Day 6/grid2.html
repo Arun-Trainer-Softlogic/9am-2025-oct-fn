@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .grid-box {
+        display: grid;
+        grid-template-rows: 2fr 1fr  400px 2fr;
+        gap: 10px;
+      }
+
+      .grid-box div {
+        background-color: lightcoral;
+        color: black;
+        text-align: center;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-box">
+      <div>Header</div>
+      <div>main</div>
+      <div>Footer</div>
+      <div>extras</div>
+    </div>
+  </body>
+</html>

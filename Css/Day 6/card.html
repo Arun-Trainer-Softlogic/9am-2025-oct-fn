@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Card Component</title>
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card-bg: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      --accent: #60a5fa;
+      --glass: rgba(255,255,255,0.03);
+      --radius: 16px;
+      --max-width: 360px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% 10%, rgba(96,165,250,0.08), transparent),
+                  radial-gradient(900px 400px at 90% 90%, rgba(96,165,250,0.04), transparent),
+                  var(--bg);
+      color:#e6eef8;
+      padding:32px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s;
+      backdrop-filter: blur(6px) saturate(120%);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .card:hover{
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 18px 50px rgba(2,6,23,0.75);
+    }
+
+    .card__media{
+      position:relative;
+      aspect-ratio: 16/9;
+      overflow:hidden;
+    }
+
+    .card__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transform: scale(1.02);
+      transition:transform .8s ease;
+    }
+
+    .card:hover .card__media img{ transform: scale(1.07) rotate(.4deg); }
+
+    .card__content{
+      padding:20px;
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .avatar{
+      flex:0 0 56px;
+      width:56px;height:56px;
+      border-radius:12px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.04);
+      background:linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    }
+
+    .avatar img{ width:100%; height:100%; object-fit:cover; display:block }
+
+    .meta{
+      flex:1;
+    }
+
+    .meta__title{
+      margin:0 0 6px 0;
+      font-size:1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .meta__subtitle{
+      margin:0 0 10px 0;
+      font-size:.86rem;
+      color: #bcd4ff;
+      opacity:.9;
+    }
+
+    .meta__desc{
+      margin:0 0 14px 0;
+      font-size:.9rem;
+      line-height:1.45;
+      color: rgba(230,238,248,0.87);
+    }
+
+    .card__actions{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+
+    .btn{
+      appearance:none;
+      border:0;
+      padding:8px 12px;
+      border-radius:12px;
+      font-weight:600;
+      cursor:pointer;
+      background:transparent;
+      color:var(--accent);
+      transition: all .18s ease;
+      box-shadow: inset 0 -2px 0 rgba(96,165,250,0.06);
+      border: 1px solid rgba(96,165,250,0.12);
+    }
+
+    .btn--primary{
+      background: linear-gradient(90deg, rgba(96,165,250,0.16), rgba(96,165,250,0.06));
+      color: #eaf4ff;
+      padding:10px 14px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(96,165,250,0.06);
+    }
+
+    .btn:active{ transform: translateY(1px) }
+
+    /* small responsive tweak */
+    @media (max-width:420px){
+      :root{--max-width: 340px}
+      .card__content{padding:16px}
+      .avatar{width:48px;height:48px}
+    }
+  </style>
+</head>
+<body>
+  <article class="card" aria-label="Profile card">
+    <div class="card__media">
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Abstract background">
+    </div>
+
+    <div class="card__content">
+      <div class="avatar" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Author avatar">
+      </div>
+
+      <div class="meta">
+        <h3 class="meta__title">Aurora UI — Design System</h3>
+        <p class="meta__subtitle">Component preview · 3 min read</p>
+        <p class="meta__desc">A compact, modern card layout with glassmorphism touches, responsive sizing, and subtle motion — perfect for profile previews, blog teasers, or product highlights.</p>
+
+        <div class="card__actions">
+          <button class="btn" aria-label="Save">Save</button>
+          <button class="btn btn--primary" aria-label="Read more">Read more</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</body>
+</html>

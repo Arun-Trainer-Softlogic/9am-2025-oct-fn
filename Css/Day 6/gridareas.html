@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .layout{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto; 
+            grid-template-areas: 
+            "header header"
+            "sidebar main" 
+            "footer footer" 
+            ;
+
+        }
+
+        .header{
+            background-color: lightgreen;
+            grid-area: header;
+
+        }
+        .sidebar{
+            background-color: rgb(248, 248, 108);
+            grid-area: sidebar;
+            
+        }
+        .main{
+            background-color: aqua;
+            grid-area:main ;
+        }
+
+        .footer{
+            background-color: slateblue;
+            grid-area: footer;
+        }
+        li{
+            display: inline-block;
+            background: grey;
+            padding: 16px;
+        }
+        .flo{
+            float: right;
+        }
+        button{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="header">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>contact</li>
+                    <li class="flo">settings</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="sidebar">
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+            <button>sdfgjk</button>
+        </div>
+        <div class="main">
+            <section>
+                <article>
+                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae sed doloribus, deserunt impedit sequi dolore repudiandae vel sit in nam et nostrum esse est eum aut totam magni omnis alias cum itaque nulla temporibus aspernatur recusandae? Maxime maiores exercitationem neque aliquid. Animi, esse quo. Vero animi ad accusantium sit inventore?</p>
+                </article>
+            </section>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
