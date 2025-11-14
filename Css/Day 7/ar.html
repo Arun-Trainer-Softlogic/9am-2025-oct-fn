@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: white;
+}
+
+.box {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border: 2px solid black;
+}
+@media screen and (min-width : 600px){
+    .px-units {
+        background-color: lightcoral;
+        width: 500px;
+    }
+}
+
+
+
+@media screen and (min-width : 40em){
+    .em-units{
+        background-color: rgb(235, 235, 46);
+        font-size: 1.5em;
+        padding: 2em;
+    }
+}
+@media screen and (min-width : 50rem){
+    .rem-units{
+        background-color: lightgreen;
+        width: 60rem;
+        padding: 2em;
+    }
+}
+
+@media screen and (min-height: 80vh) { 
+    .vh-vw-units {
+        background-color: lightsalmon;
+        /* Use VW to make width proportional to viewport width */
+        width: 75vw; 
+        height: 10vh;
+    }
+}
+</style>
+</head>
+<body>
+  
+    <div class="box px-units">
+        Box with px units
+    </div>
+    <div class="box em-units">
+        Box with em units
+    </div>
+    <div class="box rem-units">
+        Box with rem units
+    </div>
+    <div class="box vh-vw-units">
+        Box with vh/vw units
+    </div>
+</body>
+</html
+
+
+
+
+| Unit  | Description                       | Example              | Behavior                         |
+| ----- | --------------------------------- | -------------------- | -------------------------------- |
+| `px`  | Fixed pixels                      | `width: 200px;`      | Absolute, not responsive         |
+| `%`   | Relative to parent                | `width: 80%;`        | Adjusts with container           |
+| `em`  | Relative to element’s font size   | `font-size: 2em;`    | Scales with parent text          |
+| `rem` | Relative to root (html) font size | `font-size: 1.5rem;` | Consistent sizing across site    |
+| `vh`  | 1% of viewport height             | `height: 100vh;`     | Perfect for full-screen sections |
+| `vw`  | 1% of viewport width              | `width: 100vw;`      | Great for responsive widths      |

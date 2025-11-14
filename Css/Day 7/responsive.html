@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+
+    <style>
+
+
+
+p{
+    background-color: lightgreen;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+@media (max-width : 600px) {
+    body{
+        background-color: yellow;
+    }
+    p{
+        padding: 50px;
+    }
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color:navy;
+    padding: 15px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;background-color: pink;
+    padding: 15px;
+    width: 20px;
+
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+
+}
+
+
+.grid div{
+    background: coral;
+    color: white;   
+    padding: 20px;
+    text-align: center;
+}
+
+
+@media (min-width : 600px){
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width:786px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+
+
+/* @media (min-width : 786px) and (max-width:1024px) {
+    body{
+        background-color: lightgreen;
+    }
+} */
+
+/* @media (786px <= width <= 1024px) {
+ 
+} */
+
+
+/* @media (min-width:786px) and (max-width: 1024px){
+       body{
+        background-color: rgb(255, 0, 43);
+    }
+} */
+
+
+    </style>
+</head>
+<body>
+    <h1>Responsive background</h1>
+
+
+
+    <p>Resize your browser window to see the color change</p>
+
+
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+
+
+
+    <div class="grid">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+       
+    </div>
+
+</body>
+</html>
