@@ -238,14 +238,88 @@
 
 
 
-function greet(name , callback){
-    console.log("hello ," + name );
-    callback()
+// function greet(name , callback){
+//     console.log("hello ," + name );
+//     callback()
     
-}
+// }
 
-function sayGoodbye(){
-    console.log("ggoodbye");
-}
+// function sayGoodbye(){
+//     console.log("ggoodbye");
+// }
 
-greet("arun", sayGoodbye)
+// greet("arun", sayGoodbye)
+
+
+
+
+
+
+// (function (){
+//     let count = 0 ;
+//     console.log(count);
+    
+// })();
+
+
+
+// console.log(count);
+
+// let sum = 1 ;
+
+
+// function add (){
+//     sum = sum + 10 ;
+//     console.log(sum);
+//     }
+
+
+//     add()
+
+
+// const counter = (function () {
+//     let value = 0;          // stores the running total
+//     let updatedValue = 0;   // stores last increment result (optional)
+
+//     return {
+//         increment() {
+//             updatedValue = value + 1; // calculate new value
+//             value = updatedValue;     // update main value
+//             return value;             // return the new value
+//         }
+//     };
+// })();
+
+
+
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+// console.log(counter.increment());
+
+
+
+
+
+
+
+// const counter = (function (){
+//     let value = 0 ;
+//     return{
+//         increment(){
+//             value = value + 1 ;
+//             return value ;
+//         }
+//     }
+// })();
+
+
+
+
