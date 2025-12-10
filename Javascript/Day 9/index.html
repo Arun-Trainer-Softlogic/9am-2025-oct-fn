@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <h2 id="title">Hello DOM!</h2>
+
+    <p class="msg">Welcome to Javascript</p>
+
+    <p id="box">This is a box</p>
+    <ul id="list"></ul>
+    <p id="removeMe">Rempve this pareakjhasd</p>
+
+    <script>
+      const heading = document.getElementById("title");
+      const para = document.querySelector(".msg");
+      const box = document.getElementById("box");
+      const ar = (heading.textContent = "Uploded the file ");
+      const ul = document.getElementById("list");
+      const li = document.createElement("li");
+
+      // changed to itlacs
+
+      heading.innerHTML = `<em> ${ar} </em>`;
+
+      // change the box color
+
+      box.style.color = "white";
+      box.style.backgroundColor = "red";
+      box.style.padding = "20px";
+
+      li.textContent = "New Item";
+      ul.appendChild(li);
+
+      document.getElementById("removeMe").textContent = "";
+
+
+      
+    </script>
+  </body>
+</html>
