@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <p class="item">Item 4</p>
+
+
+    <ul  id="list">
+
+    </ul>
+
+
+    <div id="removeme">
+        remove this div 
+    </div>
+
+
+    <img id="myimage" >
+
+
+
+    <script>
+
+        const eleWithClass = document.querySelectorAll('.item');
+        const ul = document.getElementById("list");
+        const li = document.createElement("li")
+        const image = document.getElementById("myimage")
+         
+
+    //   for (let i = 0 ; i < eleWithClass.length ; i++){
+    //     eleWithClass[i].style.color = "red"
+    //   }
+
+
+    for (const item of eleWithClass){
+        item.textContent = "yellow"
+    }
+
+
+    li.textContent = "new Item"
+    ul.appendChild(li)
+
+
+
+    image.alt ="arun"
+    image.src = "./aaaa.png"
+
+  
+
+    document.getElementById("removeme").remove()
+
+    
+
+
+      
+        
+    </script>
+  </body>
+</html>
