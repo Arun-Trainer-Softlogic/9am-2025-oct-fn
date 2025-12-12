@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>forms Events</h2>
+    <form action="" id="Mysore">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="Username" name="username" />
+      <label for="city">CITY</label>
+      <select name="city" id="city">
+        <option value="">Select city</option>
+        <option value="Chennai">Chennai</option>    
+        <option value="Mumbai">Mumbai</option>
+      </select>
+
+      
+      <label for="gender">Gender</label>
+      <label >Male</label>
+      <input type="radio"  name="gender" value="male">
+      <label >Female</label>
+      <input type="radio"  name="gender" value="Female">
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="status"></p>
+
+    <script>
+      const userName = document.getElementById("username");
+      const city = document.getElementById("city");
+      const form = document.getElementById("Mysore");
+      const status = document.getElementById("status");
+
+      userName.addEventListener("focus", () => {
+        status.textContent = "username field is in focus  ";
+      });
+
+      username.addEventListener("blur", () => {
+        status.textContent = "Input Lost Focus!";
+      });
+      city.addEventListener("change", () => {
+        status.textContent = "City changed to: " + city.value;
+      });
+    </script>
+  </body>
+</html>
