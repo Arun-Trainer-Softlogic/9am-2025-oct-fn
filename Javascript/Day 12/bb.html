@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Divide Example</title>
+  </head>
+  <body>
+
+    <h3>Division with Error Handling</h3>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br><br>
+
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="divide()">Divide</button>
+
+    <p id="output"></p>
+
+    <script>
+      function divide() {
+        try {
+          // Get values from input fields
+          let a = Number(document.getElementById("num1").value);
+          let b = Number(document.getElementById("num2").value);
+
+          // Validation
+          if (isNaN(a) || isNaN(b)) {
+            throw new Error("Please enter valid numbers");
+          }
+
+          if (b === 0) {
+            throw new Error("Cannot divide by zero");
+          }
+
+          // Perform division
+          document.getElementById("output").innerText = "Result: " + (a / b);
+
+        } catch (err) {
+          document.getElementById("output").innerText = err.message;
+        }
+      }
+    </script>
+
+  </body>
+</html>

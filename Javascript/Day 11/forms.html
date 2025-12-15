@@ -44,6 +44,11 @@
       city.addEventListener("change", () => {
         status.textContent = "City changed to: " + city.value;
       });
+
+      form.addEventListener("submit" , (e)=> {
+        e.preventDefault();
+      })
+
     </script>
   </body>
 </html>
