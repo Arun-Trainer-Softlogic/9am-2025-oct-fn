@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async and wait</title>
+  </head>
+  <body>
+    <h2>Async and Await</h2>
+    <button onclick="loadData()">Load data</button>
+    <p id="output"></p>
+
+    <script>
+      function fetchData() {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            resolve("data loaded Successfully");
+          }, 5000);
+        });
+      }
+
+      async function loadData() {
+        document.getElementById("output").innerText = "Loading.....";
+
+        let result = await fetchData();
+        document.getElementById("output").innerText = result;
+      }
+    </script>
+  </body>
+</html>
