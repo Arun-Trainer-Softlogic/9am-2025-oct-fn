@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p{
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showUser()">Show User</button>
+    <p id="output"></p>
+
+    <script>
+      function showUser() {
+        fetch("https://api.github.com/users/arun-cloud-dev/followers")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((n) => {
+              // console.log(n.login);
+              let tATA = n.login
+              document.getElementById("output").innerText += tATA + "\n"
+            });
+          })
+          .catch((error) => console.log(error));
+      }
+    </script>
+  </body>
+</html>
