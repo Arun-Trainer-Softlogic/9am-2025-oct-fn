@@ -1,8 +1,10 @@
 
 import './App.css'
-import Card from './Card'
-import Header from './Header'
-import Profile from './Profile'
+import Card from './components/Card'
+import Counter from './components/Counter'
+import Header from './components/Header'
+import Profile from './components/Profile'
+import Toggle from './components/Toggle'
 
 function App() {
 
@@ -24,7 +26,11 @@ function App() {
           <h2>Message </h2>
           <p>Welcome to react people </p>
         </Card>
-      </div>
+
+
+        <Counter/>
+        <Toggle/>
+            </div>
 
 
     </>
