@@ -11,6 +11,9 @@ import StatusMessage from './components/StatusMessage'
 import Toggle from './components/Toggle'
 import ToggleMessage from './components/ToggleMessage'
 import UserRole from './components/UserRole'
+import ControlledInputs from './components/ControlledInputs'
+import UncontrolledInputs from './components/UncontrolledInputs'
+import BasicFormValidation from './components/BasicFormValidation'
 
 function App() {
 
@@ -55,6 +58,11 @@ function App() {
 
         {showProfile && <Profile age="24" name="arun" PLACE="Tambaram" />}
       </div>
+
+
+      <ControlledInputs/>
+      <UncontrolledInputs/>
+      <BasicFormValidation/>
 
 
     </>
