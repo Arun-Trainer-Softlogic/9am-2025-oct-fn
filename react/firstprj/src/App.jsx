@@ -14,6 +14,9 @@ import UserRole from './components/UserRole'
 import ControlledInputs from './components/ControlledInputs'
 import UncontrolledInputs from './components/UncontrolledInputs'
 import BasicFormValidation from './components/BasicFormValidation'
+import Followers from './components/Followers'
+import TimerExample from './components/TimerExample'
+import DateCountdown from './components/Datecountdown'
 
 function App() {
 
@@ -61,8 +64,12 @@ function App() {
 
 
       <ControlledInputs/>
+
       <UncontrolledInputs/>
       <BasicFormValidation/>
+      <Followers/>
+      <TimerExample/>
+      <DateCountdown/>
 
 
     </>
