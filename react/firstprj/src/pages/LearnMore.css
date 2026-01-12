@@ -1,0 +1,46 @@
+.learnmore-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.learnmore-card {
+  background: white;
+  padding: 35px;
+  max-width: 450px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+.learnmore-card h2 {
+  margin-bottom: 15px;
+}
+
+.learnmore-card p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.learnmore-card ul {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.learnmore-card li {
+  margin-bottom: 8px;
+}
+
+.learnmore-card button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}

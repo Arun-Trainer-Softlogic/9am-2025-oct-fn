@@ -1,0 +1,165 @@
+.home {
+  min-height: calc(100vh - 70px); /* navbar height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+/* LEFT CONTENT */
+.home-content {
+  max-width: 550px;
+}
+
+.home-content h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.home-content h1 span {
+  color: #ffd86b;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 35px;
+  color: #f1f1f1;
+}
+
+/* BUTTONS */
+.home-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: #ffd86b;
+  color: #333;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.secondary-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.home-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-card {
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-image {
+    margin-top: 40px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.home {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-content h1 {
+  animation: slideUp 1s ease forwards;
+}
+
+.home-content p {
+  animation: slideUp 1.2s ease forwards;
+}
+
+.primary-btn,
+.secondary-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.secondary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-card {
+  animation: float 4s ease-in-out infinite;
+}
+
+.home-buttons {
+  animation: slideUp 1.4s ease forwards;
+}
+
