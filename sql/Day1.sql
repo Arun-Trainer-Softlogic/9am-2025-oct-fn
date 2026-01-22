@@ -1,5 +1,5 @@
 -- create database school
- use school;
+--  use school;
 
 -- create table students (
 -- id int ,
